@@ -78,6 +78,7 @@ def day1(input_file):
 
         return sum
 
+    print('\nday 1')
     print('part 1:', part1(input_file))
     print('part 2:', part2(input_file))
 
