@@ -42,6 +42,6 @@ def day4(input_file):
                 cards_won[i + j + 1] += multiplier
         return sum(cards_won)
     
-    print('\nday 3')
+    print('\nday 4')
     print('part 1:', part1())
     print('part 2:', part2())
