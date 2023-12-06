@@ -10,6 +10,6 @@ def main():
     day2('inputs/2.txt')
     day3('inputs/3.txt')
     day4('inputs/4.txt')
-    day5('inputs/5.txt')
+    # day5('inputs/5.txt')
     day6('inputs/6.txt')
 main()
