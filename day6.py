@@ -40,13 +40,16 @@ def day6(input_file):
         multiple = 1
         for race in races:
             first_zero, second_zero = get_ms_held_to_equal_distance(race[0], race[1])
+            if first_zero % 1.0 == 0:
+                first_zero += 1
             number_of_ways = math.ceil(second_zero) - math.ceil(first_zero)
-            print('num:', number_of_ways)
             multiple *= number_of_ways
         return multiple
     
     def part2():
         first_zero, second_zero = get_ms_held_to_equal_distance(real_race[0], real_race[1])
+        if first_zero % 1.0 == 0:
+            first_zero += 1
         return math.ceil(second_zero) - math.ceil(first_zero)
 
     def get_ms_held_to_equal_distance(time, distance):
@@ -59,10 +62,8 @@ def day6(input_file):
         c = -distance
         first_zero = (-b + math.sqrt(b**2 - (4 * a * c))) / (2 * a)
         second_zero = (-b - math.sqrt(b**2 - (4 * a * c))) / (2 * a)
-        # print(first_zero, second_zero)
         return first_zero, second_zero
 
     print('\nday 6')
     print('part 1:', part1())
     print('part 2:', part2())
-    print(get_ms_held_to_equal_distance(62, 553))
