@@ -27,7 +27,6 @@ def day8(input_file):
         for path in paths:
             if path[-1] == 'A':
                 locations.append(path)
-        print(locations)
         for location in locations:
             steps = 0
             while True:
@@ -39,9 +38,9 @@ def day8(input_file):
                     steps += 1
                 if location[-1] == 'Z':
                     break
-            print(f'steps for {location}: {steps}')
             all_steps.append(steps)     
         return math.lcm(*all_steps)
-                
-    print(part1())
-    print(part2())
+
+    print('\nday 8')
+    print('part 1:', part1())
+    print('part 2:', part2())
