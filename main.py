@@ -7,6 +7,7 @@ from day6 import day6
 from day7 import day7
 from day8 import day8
 from day9 import day9
+from day10 import day10
 
 def main():
     day1('inputs/1.txt')
@@ -18,5 +19,6 @@ def main():
     day7('inputs/7.txt')
     day8('inputs/8.txt')
     day9('inputs/9.txt')
+    day10('inputs/10.txt')
 
 main()
