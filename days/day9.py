@@ -14,7 +14,7 @@ def construct_pyramid(seq):
         current_layer += 1
     return pyramid
 
-def day9(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     lines = [l.strip() for l in f.readlines()]
     sequences = [l.split(' ') for l in lines]

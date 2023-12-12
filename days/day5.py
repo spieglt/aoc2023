@@ -96,7 +96,7 @@ def location_to_seed(location):
     seed = reverse_trace(soil, reference['seed-to-soil'])
     return seed
 
-def day5(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     lines = [l.strip() for l in f.readlines()]
     seeds = lines[0][len('seeds: '):].split(' ')

@@ -238,7 +238,7 @@ def compare_two_hands_camel_way_with_jokers(hand1, hand2):
                 return 1
 
 
-def day7(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     lines = [l.strip() for l in f.readlines()]
     hands = []

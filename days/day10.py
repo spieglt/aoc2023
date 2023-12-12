@@ -24,7 +24,7 @@ def coords_to(src, direction):
     if direction == right:
         return (src[0]+1, src[1])
 
-def day10(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     pipes = [l.strip() for l in f.readlines()]
     loop_coords = set()

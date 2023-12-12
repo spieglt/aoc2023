@@ -1,6 +1,6 @@
 import math
 
-def day8(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     lines = [l.strip() for l in f.readlines()]
     paths = {}

@@ -6,7 +6,7 @@ criteria = {
     'blue': 14,
 }
 
-def day2(input_file):
+def solve(input_file):
     def part1(input_file):
         f = open(input_file, 'r')
         sum = 0

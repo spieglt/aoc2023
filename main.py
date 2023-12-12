@@ -1,24 +1,30 @@
-from day1 import day1
-from day2 import day2
-from day3 import day3
-from day4 import day4
-from day5 import day5
-from day6 import day6
-from day7 import day7
-from day8 import day8
-from day9 import day9
-from day10 import day10
+from days import *
 
 def main():
-    day1('inputs/1.txt')
-    day2('inputs/2.txt')
-    day3('inputs/3.txt')
-    day4('inputs/4.txt')
-    day5('inputs/5.txt')
-    day6('inputs/6.txt')
-    day7('inputs/7.txt')
-    day8('inputs/8.txt')
-    day9('inputs/9.txt')
-    day10('inputs/10.txt')
+    day1.solve('inputs/1.txt')
+    day2.solve('inputs/2.txt')
+    day3.solve('inputs/3.txt')
+    day4.solve('inputs/4.txt')
+    day5.solve('inputs/5.txt')
+    day6.solve('inputs/6.txt')
+    day7.solve('inputs/7.txt')
+    day8.solve('inputs/8.txt')
+    day9.solve('inputs/9.txt')
+    day10.solve('inputs/10.txt')
+    day11.solve('inputs/11.txt')
+    # day12.solve('inputs/12.txt')
+    # day13.solve('inputs/13.txt')
+    # day14.solve('inputs/14.txt')
+    # day15.solve('inputs/15.txt')
+    # day16.solve('inputs/16.txt')
+    # day17.solve('inputs/17.txt')
+    # day18.solve('inputs/18.txt')
+    # day19.solve('inputs/19.txt')
+    # day20.solve('inputs/20.txt')
+    # day21.solve('inputs/21.txt')
+    # day22.solve('inputs/22.txt')
+    # day23.solve('inputs/23.txt')
+    # day24.solve('inputs/24.txt')
+    # day25.solve('inputs/25.txt')
 
 main()

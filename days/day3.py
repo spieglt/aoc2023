@@ -95,7 +95,7 @@ def find_gears(schematic):
                 gears.append(Gear(x, y))
     return gears                
 
-def day3(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     schematic = [l.strip() for l in f.readlines()]
     def part1():

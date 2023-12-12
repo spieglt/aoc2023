@@ -1,5 +1,5 @@
 
-def day4(input_file):
+def solve(input_file):
     f = open(input_file, 'r')
     cards = [l.strip() for l in f.readlines()]
 

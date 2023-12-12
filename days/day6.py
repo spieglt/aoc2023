@@ -1,6 +1,6 @@
 import math
 
-def day6(input_file):
+def solve(input_file):
     # f = open(input_file, 'r')
     races = [ # (time, distance)
         (62, 553),
