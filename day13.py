@@ -85,28 +85,65 @@ def solve(input_file):
         lines = [list(l) for l in lines if l]
         puzzles.append(lines)
 
+    old_horizontal_reflection_indices = [None] * len(puzzles)
+    old_vertical_reflection_indices = [None] * len(puzzles)
+
     def part1():
         sum = 0
         for i, puzzle in enumerate(puzzles):
-            print('\ncurrent puzzle:')
-            print(str_puzzles[i])
+            # print('\ncurrent puzzle:')
+            # print(str_puzzles[i])
             res = detect_mirror_horizontal(puzzle)
             if res:
                 horizontal_index = res[0]
+                old_horizontal_reflection_indices[i] = horizontal_index
                 rows_to_left = res[1]
                 print(f'horizontal reflection at {horizontal_index}')
                 sum += rows_to_left * 100
             res = detect_mirror_vertical(puzzle)
             if res:
                 vertical_index = res[0]
+                old_vertical_reflection_indices[i] = horizontal_index
                 rows_above = res[1]
                 print(f'vertical reflection at {vertical_index}')
                 sum += rows_above
         return sum
 
     def part2():
-        pass
+        print('old horizontal:')
+        print(old_horizontal_reflection_indices)
+        print('old vertical:')
+        print(old_vertical_reflection_indices)
+        sum = 0
+        for i, puzzle in enumerate(puzzles):
+            print('\ncurrent puzzle:')
+            print(str_puzzles[i])
+            for y in range(len(puzzle)):
+                for x in range(len(puzzle[0])):
+                    # print(f'smudge: {x}, {y}')
+                    if puzzle[y][x] == '.':
+                        puzzle[y][x] = '#'
+                    else:
+                        puzzle[y][x] = '.'
+                        
+                    res = detect_mirror_horizontal(puzzle)
+                    if res and old_horizontal_reflection_indices[i] != res[0]:
+                        horizontal_index = res[0]
+                        rows_to_left = res[1]
+                        print(f'horizontal reflection at {horizontal_index}')
+                        sum += rows_to_left * 100
+                        break
+                    res = detect_mirror_vertical(puzzle)
+                    if res and old_vertical_reflection_indices[i] != res[0]:
+                        vertical_index = res[0]
+                        rows_above = res[1]
+                        print(f'vertical reflection at {vertical_index}')
+                        sum += rows_above
+                        break
+        return sum
+                    
 
+                    
     print('day 13')
     print('part 1:', part1())
     print('part 2:', part2())
