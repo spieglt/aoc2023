@@ -47,6 +47,9 @@ def solve(input_file):
             sum += next_value
         return sum
 
-    print('\nday 9')
+    print('day 9')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/9.txt')

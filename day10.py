@@ -217,6 +217,9 @@ def solve(input_file):
 
         return tiles_enclosed
 
-    print('\nday 10')
+    print('day 10')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/10.txt')

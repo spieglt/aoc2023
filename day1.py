@@ -78,7 +78,9 @@ def solve(input_file):
 
         return sum
 
-    print('\nday 1')
+    print('day 1')
     print('part 1:', part1(input_file))
     print('part 2:', part2(input_file))
 
+if __name__ == '__main__':
+    solve('inputs/1.txt')

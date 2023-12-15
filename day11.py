@@ -43,9 +43,12 @@ def solve(input_file):
         coords = get_expanded_coords(lines, empty_rows, empty_columns, 1_000_000)
         return sum_distances(coords)
 
-    print('\nday 11')
+    print('day 11')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/11.txt')
 
 # naive way
 

@@ -9,6 +9,9 @@ def solve(input_file):
     def part2():
         pass
 
-    print('\nday 14')
+    print('day 15')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/15.txt')

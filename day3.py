@@ -130,6 +130,9 @@ def solve(input_file):
                 sum += ratio
         return sum
 
-    print('\nday 3')
+    print('day 3')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/3.txt')

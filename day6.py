@@ -11,31 +11,6 @@ def solve(input_file):
     
     real_race = (62649190, 553101014731074)
 
-    # brute force solutions, slow
-
-    # def part1():
-    #     multiple = 1
-    #     for race in races:
-    #         number_of_ways = 0
-    #         time = race[0]
-    #         for ms_held in range(time):
-    #             ms_traveling = time - ms_held
-    #             mm_traveled = ms_traveling * ms_held
-    #             if mm_traveled > race[1]:
-    #                 number_of_ways += 1
-    #         multiple *= number_of_ways
-    #     return multiple
-
-    # def part2():
-    #     number_of_ways = 0
-    #     time = real_race[0]
-    #     for ms_held in range(time):
-    #         ms_traveling = time - ms_held
-    #         mm_traveled = ms_traveling * ms_held
-    #         if mm_traveled > real_race[1]:
-    #             number_of_ways += 1
-    #     return number_of_ways
-
     def part1():
         multiple = 1
         for race in races:
@@ -64,6 +39,34 @@ def solve(input_file):
         second_zero = (-b - math.sqrt(b**2 - (4 * a * c))) / (2 * a)
         return first_zero, second_zero
 
-    print('\nday 6')
+    print('day 6')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/6.txt')
+
+# brute force solutions, slow
+
+# def part1():
+#     multiple = 1
+#     for race in races:
+#         number_of_ways = 0
+#         time = race[0]
+#         for ms_held in range(time):
+#             ms_traveling = time - ms_held
+#             mm_traveled = ms_traveling * ms_held
+#             if mm_traveled > race[1]:
+#                 number_of_ways += 1
+#         multiple *= number_of_ways
+#     return multiple
+
+# def part2():
+#     number_of_ways = 0
+#     time = real_race[0]
+#     for ms_held in range(time):
+#         ms_traveling = time - ms_held
+#         mm_traveled = ms_traveling * ms_held
+#         if mm_traveled > real_race[1]:
+#             number_of_ways += 1
+#     return number_of_ways

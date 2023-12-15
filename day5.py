@@ -16,38 +16,6 @@ reference = {
     'humidity-to-location': Mapper(),
 }
 
-# def make_new_map(map1, map2):
-
-# def stitch_maps(map1, map2):
-#     # stitch ends of map1 to starts of map2
-#     # return new maps that translate from starts of map1 to ends of map2
-#     new_map = Mapper()
-#     translator = []
-#     for i in range(len(map1.ends)):
-#         m1_start = map1.ends[i] # this is us grabbing from the ends of map 1
-#         m1_end = m1_start + map1.ranges[i]
-#         for j in range(len(map1.starts)):
-#             m2_start = map2.starts[j] # here we grab the starts of map 2
-#             m2_end = m2_start + map2.ranges[i]
-#             if (m1_end > m2_start  # one possible partial overlap
-#                 or m2_end > m1_start # other partial overlap
-#                 or (m1_start < m2_start and m1_end > m2_end) # 1 contains 2
-#                 or (m1_start < m2_start and m1_end > m2_end)): # 2 contains 1
-#                 start_of_overlap = max(m1_start, m2_start)
-#                 end_of_overlap = min(m1_end, m2_end)
-#                 # is new map a translation layer? it represents overlaps of map 1's ends and map2's starts. how does that link map 1 starts to map2 ends? map 1's starts must be revised to line up with this new map's ends.
-#                 # and map 2's must be revised to line up with this new map's starts.
-
-#                 # no, we're not constructing a map yet.
-#                 # new_map.ends.append(end_of_overlap)
-#                 # new_map.starts.append(start_of_overlap)
-#                 # new_map.ranges.append(end_of_overlap - start_of_overlap)
-                
-#                 # translation_range = start_of_overlap to end_of_overlap
-#                 # look these values up in m1 start and m2 end
-#                 # that's the new start and end for new_map, and its range is end - start
-#                 offset_from_end = map1.ends[i] + map1.ranges[i] - m1_end
-
 def trace(value, mapper):
     found = False
     dst = None
@@ -166,6 +134,9 @@ def solve(input_file):
                     smallest_location = i
         return smallest_location
     
-    print('\nday 5')
+    print('day 5')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/5.txt')

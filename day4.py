@@ -42,6 +42,9 @@ def solve(input_file):
                 cards_won[i + j + 1] += multiplier
         return sum(cards_won)
     
-    print('\nday 4')
+    print('day 4')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/4.txt')

@@ -237,7 +237,6 @@ def compare_two_hands_camel_way_with_jokers(hand1, hand2):
             elif cards_with_jokers[hand1[i]] > cards_with_jokers[hand2[i]]:
                 return 1
 
-
 def solve(input_file):
     f = open(input_file, 'r')
     lines = [l.strip() for l in f.readlines()]
@@ -271,6 +270,9 @@ def solve(input_file):
         return sum
 
     
-    print('\nday 7')
+    print('day 7')
     print('part 1:', part1())
     print('part 2:', part2())
+
+if __name__ == '__main__':
+    solve('inputs/7.txt')
